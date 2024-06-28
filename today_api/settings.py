@@ -64,7 +64,8 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
    os.environ.get('ALLOWED_HOST'),
    'localhost',
-   ]
+   '8000-benbarker04-todayapi-rxlrpzglgj4.ws.codeinstitute-ide.net',
+]
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
@@ -78,6 +79,9 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 CORS_ALLOWED_CREDENTIALS =  True
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-benbarker04-todayapi-rxlrpzglgj4.ws.codeinstitute-ide.net'
+]
 
 # Application definition
 
