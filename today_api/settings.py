@@ -64,7 +64,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
    os.environ.get('ALLOWED_HOST'),
    'localhost',
-   '8000-benbarker04-todayapi-rxlrpzglgj4.ws.codeinstitute-ide.net',
+   '8000-benbarker04-todayapi-z5dhkbxdz50.ws.codeinstitute-ide.net',
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
@@ -80,7 +80,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 CORS_ALLOWED_CREDENTIALS =  True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-benbarker04-todayapi-rxlrpzglgj4.ws.codeinstitute-ide.net'
+    'https://8000-benbarker04-todayapi-z5dhkbxdz50.ws.codeinstitute-ide.net'
 ]
 
 # Application definition
@@ -116,6 +116,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
