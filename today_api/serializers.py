@@ -6,6 +6,6 @@ class CurrentUserSerializer(UserDetailsSerializer):
     profile_id = serializers.ReadOnlyField(source='profile.id')
 
     class Meta(UserDetailsSerializer.Meta):
-        fields = UserDetailsSerializer.Meta.fields + (
+        fields = UserDetailsSerializer.Meta.fields = (
             'profile_id'
         )
